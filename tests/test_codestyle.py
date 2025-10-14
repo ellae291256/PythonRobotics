@@ -131,7 +131,7 @@ def test():
         print(errors)
     else:
         print("No lint errors found.")
-    assert rc == 0
+    assert rc == 0, f"Ruff exited with code {rc} due to lint errors: {errors}"
 
 
 if __name__ == '__main__':
