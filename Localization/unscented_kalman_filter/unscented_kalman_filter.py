@@ -93,10 +93,10 @@ def observation_model(x):
 def generate_sigma_points(xEst, PEst, gamma):
     """
     Generate sigma points for UKF.
-    
+
     Sigma points are deterministically sampled points used to capture
     the mean and covariance of the state distribution.
-    
+
     Parameters
     ----------
     xEst : numpy.ndarray
@@ -105,7 +105,7 @@ def generate_sigma_points(xEst, PEst, gamma):
         Current state covariance estimate (n x n)
     gamma : float
         Scaling parameter sqrt(n + lambda)
-    
+
     Returns
     -------
     sigma : numpy.ndarray
@@ -248,15 +248,15 @@ def plot_covariance_ellipse(xEst, PEst):  # pragma: no cover
 def setup_ukf(nx):
     """
     Setup UKF parameters and weights.
-    
+
     Calculates the weights for mean and covariance computation,
     and the scaling parameter gamma for sigma point generation.
-    
+
     Parameters
     ----------
     nx : int
         Dimension of the state vector
-    
+
     Returns
     -------
     wm : numpy.ndarray
